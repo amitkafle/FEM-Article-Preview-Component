@@ -1,0 +1,278 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Manrope, sans-serif;
+  background-color: #ecf2f8;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: clamp(330px, 40vw, 850px);
+  border-radius: 0.5rem;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.banner {
+  width: auto;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  height: 250px;
+}
+.banner__img {
+  width: 100%;
+}
+
+.article {
+  padding: 1rem;
+  padding-top: 1.5rem;
+  position: relative;
+}
+.article__title {
+  font-weight: 700;
+  color: #48556a;
+}
+.article__text {
+  font-size: 0.9rem;
+  padding: 1.2rem 0 2rem 0;
+  color: #6d7f97;
+}
+.article__share--open {
+  display: grid;
+  place-items: center;
+  align-self: flex-end;
+  height: 35px;
+  width: 35px;
+  border-radius: 999px;
+  background-color: #ecf2f8;
+  margin-left: auto;
+  cursor: pointer;
+}
+.article__date {
+  font-size: 0.875rem;
+  color: #6d7f97;
+}
+
+.article__author {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.article__author_avatar {
+  border-radius: 999px;
+  width: 50px;
+}
+.article__author_name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #48556a;
+}
+.article__author div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.links {
+  position: absolute;
+  background-color: #48556a;
+  width: 100%;
+  bottom: -99px;
+  left: 0;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  height: 65px;
+  padding: 1rem;
+  -webkit-animation: 1s ease forwards;
+          animation: 1s ease forwards;
+}
+.links__title {
+  letter-spacing: 0.2rem;
+  color: #9eafc2;
+}
+.links img:not(.article__share_img) {
+  height: 20px;
+}
+.links .article__share {
+  background-color: #9eafc2;
+  height: 35px;
+  width: 35px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+.links .article__share svg path {
+  fill: #ecf2f8;
+}
+
+@-webkit-keyframes menu-open {
+  from {
+    bottom: -99px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes menu-open {
+  from {
+    bottom: -99px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+@-webkit-keyframes menu-close {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -99px;
+  }
+}
+@keyframes menu-close {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -99px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    overflow: visible;
+    width: 750px;
+    display: grid;
+    grid-template-columns: 35% 1fr 1fr;
+    grid-template-areas: "banner article article";
+  }
+
+  .banner {
+    grid-area: banner;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+  }
+  .banner__img {
+    width: 150%;
+    aspect-ratio: 10/8;
+    transform: scale(1.5);
+  }
+
+  .article {
+    grid-area: article;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .article__title {
+    font-size: 1.4rem;
+  }
+  .article__text {
+    font-size: 1.1rem;
+  }
+
+  .article__share {
+    transition: all 1s ease;
+  }
+  .article__share svg path {
+    transition: all 1s ease;
+  }
+
+  .article__author {
+    margin-top: auto;
+  }
+
+  .links {
+    width: 60%;
+    bottom: 5.5rem;
+    right: -5rem;
+    border-radius: 10px;
+    margin-left: auto;
+    z-index: 5;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .links .article__share {
+    display: none;
+  }
+  .links::before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    background-color: #48556a;
+    bottom: -0.2rem;
+    right: 7.1rem;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  @-webkit-keyframes menu-open {
+    from {
+      visibility: hidden;
+      opacity: 0;
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @keyframes menu-open {
+    from {
+      visibility: hidden;
+      opacity: 0;
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes menu-close {
+    from {
+      visibility: visible;
+      opacity: 1;
+    }
+    to {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  @keyframes menu-close {
+    from {
+      visibility: visible;
+      opacity: 1;
+    }
+    to {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  .change__share {
+    background-color: #9eafc2;
+    transition: all 1s ease;
+  }
+  .change__share svg path {
+    transition: all 1s ease;
+    fill: #fff;
+  }
+}/*# sourceMappingURL=main.css.map */
