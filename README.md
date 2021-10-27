@@ -1,8 +1,9 @@
 # Frontend Mentor - Article preview component solution
 
-This is a solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
+
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
@@ -11,8 +12,8 @@ This is a solution to the [Article preview component challenge on Frontend Mento
   - [Built with](#built-with)
 - [Author](#author)
 
-
 ## Overview
+
 ### The challenge
 
 Users should be able to:
@@ -21,23 +22,27 @@ Users should be able to:
 - See the social media share links when they click the share icon
 
 ### Screenshot
+
 - Desktop
-![Desktop](/screenshots/desktop.png)  
-  
+  ![Desktop](/screenshots/desktop.png)  
+
 - Mobile<br>
-![Mobile](/screenshots/mobile.png)
+  ![Mobile](/screenshots/mobile.png)
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [Github Pages]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT/hub/social-preview-component-using-html-css-and-javascript-wP9DumTDe)
+- Live Site URL: [Github Pages](https://amitkafle.github.io/FEM-Social-Preview-Component/)
 
 ### My process
+
 ### Built with
+
 - HTML
 - CSS / SCSS / BEM
 - Javascript
 
 ## Author
+
 - Frontend Mentor - [@amitkafle](https://www.frontendmentor.io/profile/amitkafle)
 - Twitter - [@amitkafle](https://www.twitter.com/amitkafle)
